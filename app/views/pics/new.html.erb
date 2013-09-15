@@ -2,7 +2,7 @@
 <h1 class="custom-pic-header">New Picture!</h1>
 	<div class="boxy text-center"
 	<%= simple_form_for @pic do |f| %>
-		<%= f.input :hour %>
+		<%= f.input :hour, :class => 'formfield' %>
 		<%= f.input :emotion %>
 		<%= f.input :learned %>
 		<%= submit_tag "Create", :class => 'btn-primary' 'btn-large'%>
