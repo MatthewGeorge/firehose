@@ -25,10 +25,29 @@
 		    <div class="nav-collapse collapse">
 		    <!-- .nav, .navbar-search, .navbar-form, etc -->
 		    <ul class="nav">
-		    	<%= link_to('About Us', '#') %>
+		    	<li>
+		    		<%= link_to('About Us', '#') %>
+		    	</li>
+		    	<li>
+		    		<% if current_user.blank? %>
+		    		<%= link_to 'Sign in', 
+		    		new_user_session_path %>
+	    		</li>
+	    		<li>
+		    		<%= link_to 'Sign up', 
+		    		new_user_registration_path %>
+		    	</li>
+	    	<% else %>
+	    		<li>
+	    			<%= link_to 'Sign out',
+	    			destroy_user_session_path, 
+	    			:method => :delete %>
+	    		</li>
+    		<% end %>
+    		</ul>
 		    	<%= link_to 'New Pic', new_pic_path, 
-		    			:class => 'btn btn-info'%>
-		    </ul>
+		    		:class => 'btn btn-info'%>
+
 		    </div>
 	     
 	    </div>
