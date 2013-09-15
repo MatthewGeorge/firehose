@@ -1,0 +1,11 @@
+<div class="hero-unit">
+<h2>Here are all the pics!</h2>
+
+<% @pics.each do |pic| %>
+		I was <%= pic.emotion %> in hour <%= pic.hour %> when I learned that <%= pic.learned %>
+		<p />
+<% end%>
+<br />
+</div>
+
+<%= link_to 'New Pic', new_pic_path %>
