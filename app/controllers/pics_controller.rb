@@ -1,6 +1,7 @@
 class PicsController < ApplicationController
 	# code that gets run on the new.html.erb
-	def new
+	
+		def new
 		@pic = Pic.new
 	end
 
@@ -10,6 +11,7 @@ class PicsController < ApplicationController
 
 	def create
 		@pic = Pic.create(params[:pic])
+		@tweet = @pic.hour
 		redirect_to pics_path
 	end
 

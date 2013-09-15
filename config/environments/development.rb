@@ -34,4 +34,9 @@ Myapp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # When we send mail, sends link to the right url
+  config.action_mailer.default_url_options = {
+    :host => 'localhost:3000' }
+
 end
