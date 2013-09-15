@@ -3,9 +3,10 @@
 	<div class="boxy text-center"
 	<%= simple_form_for @pic do |f| %>
 		<%= f.input :hour %>
+		<%= f.input :image, :as => :file%>
 		<%= f.input :emotion %>
 		<%= f.input :learned %>
-		<%= submit_tag "Create", :class => 'btn-primary' 'btn-large'%>
+		<%= submit_tag "Create", :class => 'btn-primary btn-large'%>
 	<% end %>
 	</div>
 </div>

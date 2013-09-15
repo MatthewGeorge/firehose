@@ -6,6 +6,6 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
-  .formfield {
-  	background-color: black;
+  input[type="text"], formfield {
+  	background-color: rgba(0,0,0, 0.5);
   }
