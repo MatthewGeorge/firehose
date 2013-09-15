@@ -1,10 +1,11 @@
-<div class="hero-unit">
-<h1>New Picture!</h1>
-
-<%= simple_form_for @pic do |f| %>
-	<%= f.input :hour %>
-	<%= f.input :emotion %>
-	<%= f.input :learned %>
-	<%= submit_tag "Create", :class => 'btn-primary' 'btn'%>
-<% end %>
+<div class="span6 offset3 text-center">
+<h1 class="custom-pic-header">New Picture!</h1>
+	<div class="boxy text-center"
+	<%= simple_form_for @pic do |f| %>
+		<%= f.input :hour %>
+		<%= f.input :emotion %>
+		<%= f.input :learned %>
+		<%= submit_tag "Create", :class => 'btn-primary' 'btn-large'%>
+	<% end %>
+	</div>
 </div>
